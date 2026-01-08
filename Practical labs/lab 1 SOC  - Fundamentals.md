@@ -4,7 +4,7 @@
 ---
 
 ##  Overview
-This TryHackMe room focuses on understanding the **Security Operations Center (SOC)**, its responsibilities, and how it operates to detect and respond to security incidents.  
+This TryHackMe room focuses on understanding the **Security Operations Center (SOC)**, its responsibilities, and how it operates to detect and respond to security incidents.
 The room introduces the **core pillars of a SOC** and includes a **practical exercise involving a port scanning alert**, handled from a SOC Level 1 analyst perspective.
 
  **Room Link:**  
