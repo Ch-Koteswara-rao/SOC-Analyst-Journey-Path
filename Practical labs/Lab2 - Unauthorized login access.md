@@ -2,7 +2,6 @@
 **SOC Analyst Journey Path | Practical Labs**
 
 ---
-
 ##  Overview
 This practical lab simulates **a day in the life of a Junior Security Analyst** working in a Security Operations Center (SOC).  
 The lab focuses on monitoring alerts in a SIEM dashboard, identifying suspicious activity, and following proper escalation and response procedures.
