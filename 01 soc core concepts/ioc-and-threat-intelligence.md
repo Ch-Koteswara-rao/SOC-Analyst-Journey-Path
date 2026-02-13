@@ -1,0 +1,105 @@
+# 🧩 Indicators of Compromise (IOC) and Threat Intelligence
+
+Indicators of Compromise (IOCs) are artifacts observed during investigation that indicate potential malicious activity. These indicators help analysts determine whether a system has been exposed to known threats.
+
+Threat intelligence is used to verify these indicators and confirm whether they are associated with malicious activity.
+
+---
+
+## 🔎 Indicators of Compromise (IOC)
+
+IOCs are specific values or artifacts identified during alert investigation that help determine whether activity is malicious or not.
+
+Common IOC types include:
+
+- File hash
+- IP address
+- Domain name
+- URL
+- File name
+- Process name
+
+Analyst focus:
+
+- Identify suspicious indicators from alerts
+- Review file and process details
+- Check whether the indicator is associated with known malicious activity
+
+Example:
+
+```
+File: updater.exe
+Hash: a4c2f9d839...
+Observation: Suspicious file detected during execution
+```
+
+The file hash can be used to verify whether the file is malicious.
+
+---
+
+## 🌐 Network Indicators
+
+Network activity can reveal communication with suspicious or unauthorized external sources.
+
+Analyst focus:
+
+- Review external IP connections initiated by processes
+- Identify connections to unknown or suspicious locations
+- Determine whether the communication is expected
+
+Example:
+
+```
+Process: powershell.exe
+Connection: 203.0.113.45
+Observation: External connection initiated
+```
+
+This external connection may indicate suspicious activity.
+
+---
+
+## 🧠 Threat Intelligence Validation
+
+Threat intelligence is used to confirm whether an identified indicator is malicious.
+
+Analyst actions:
+
+- Check file hash reputation
+- Verify IP address reputation
+- Review domain reputation
+- Confirm whether the indicator has been previously identified as malicious
+
+Example:
+
+```
+Indicator: 203.0.113.45
+Threat Intelligence Result: Malicious IP confirmed
+```
+
+This confirms the activity is associated with a known threat.
+
+---
+
+## 🔗 IOC in Attack Investigation
+
+IOCs help connect suspicious activity to confirmed malicious behavior.
+
+Example:
+
+```
+winword.exe
+ └── powershell.exe
+      └── connection to malicious IP
+```
+
+The malicious IP serves as evidence supporting the investigation.
+
+---
+
+## 🧠 Key Understanding
+
+- IOCs are indicators used to identify malicious activity
+- File hashes, IP addresses, and domains are commonly used indicators
+- Threat intelligence helps confirm whether indicators are malicious
+- IOC validation supports investigation and escalation decisions
