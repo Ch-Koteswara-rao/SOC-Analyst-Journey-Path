@@ -1,0 +1,98 @@
+# Alert Handling
+
+## Overview
+
+SOC alert handling is the process of reviewing and analyzing security alerts to determine whether they indicate malicious activity. It is the first step in identifying potential security incidents and deciding whether escalation is required.
+
+---
+
+## 🚨 Alert Triage
+
+Alert triage is the initial review of a security alert to identify suspicious activity and determine whether further investigation is necessary.
+
+### Analyst Actions
+
+- Review alert details such as file name, process, endpoint, and user
+- Identify abnormal or unexpected behavior
+- Check execution status → Allowed or Blocked
+- Determine whether validation is required
+
+### Example
+
+```
+File: invoice.exe
+Location: C:\Users\User\Downloads\
+Action: Allowed
+```
+
+Analysis → Executable allowed to run from user directory → Requires validation
+
+---
+
+## 🔍 Alert Validation
+
+Alert validation confirms whether the detected activity is malicious or legitimate.
+
+### Analyst Actions
+
+- Verify indicators such as file hash, process behavior, or network activity
+- Confirm malicious or benign classification
+- Assign classification → True Positive or False Positive
+
+### Example
+
+```
+Indicator: File hash
+Result: Malicious
+Classification: True Positive
+```
+
+Result → Malicious activity confirmed
+
+---
+
+## ⚠️ Severity Assessment
+
+Severity assessment determines the risk level based on execution and impact.
+
+### Analyst Actions
+
+- Evaluate execution status
+- Identify indicators of compromise
+- Assign severity based on impact level
+
+Severity levels:
+
+- Low → Threat blocked, no execution
+- Medium → Suspicious activity without confirmed compromise
+- High → Malicious execution or confirmed compromise
+
+---
+
+## ⬆️ Escalation
+
+Escalation is performed when malicious activity is confirmed and requires incident response.
+
+### Analyst Actions
+
+- Escalate confirmed malicious execution
+- Escalate when compromise indicators are present
+- Ensure incident response process is initiated
+
+### Example
+
+```
+Process chain:
+winword.exe → powershell.exe → external connection
+```
+
+Analysis → Suspicious execution chain → Escalation required
+
+---
+
+## Key Points
+
+- 🚨 Alert triage identifies suspicious activity
+- 🔍 Validation confirms malicious behavior
+- ⚠️ Severity assessment determines risk level
+- ⬆️ Escalation ensures proper incident response
