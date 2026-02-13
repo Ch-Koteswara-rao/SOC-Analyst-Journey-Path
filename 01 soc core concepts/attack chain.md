@@ -1,0 +1,113 @@
+# ⛓️ Attack Chain
+
+The attack chain represents the sequence of events showing how a attacker gains access, executes activity, and progresses within a system. It helps identify the entry point, trace execution flow, and determine whether compromise has occurred.
+
+Attack chains can begin through multiple entry points such as phishing, credential compromise, or malicious file execution.
+
+---
+
+## 🎯 Initial Access
+
+Initial access is the stage where the attacker first interacts with the system.
+
+Common entry points:
+
+- Phishing link opened by user
+- Malicious email attachment executed
+- Brute force or unauthorized login
+- Execution of downloaded file
+
+Example:
+
+```
+User action → Browser → Phishing link opened
+```
+
+This represents the starting point of the attack chain.
+
+---
+
+## ⚙️ Process Execution
+
+After gaining access, attackers execute processes to run commands or payloads.
+
+Analyst focus:
+
+- Identify the originating process
+- Review parent-child process relationships
+- Verify whether execution behavior is expected
+
+Example:
+
+```
+winword.exe
+ └── powershell.exe
+```
+
+This indicates command execution initiated from a document.
+
+---
+
+## 🔗 Process Chain Progression
+
+Attackers often spawn additional processes to continue activity.
+
+Analyst focus:
+
+- Trace process relationships step-by-step
+- Identify abnormal execution chains
+- Determine whether activity indicates malicious behavior
+
+Example:
+
+```
+powershell.exe
+ └── cmd.exe
+```
+
+This shows continued command execution.
+
+---
+
+## 🌐 Post-Execution Activity
+
+Following execution, additional activity may occur that indicates compromise.
+
+Analyst focus:
+
+- Identify continued process activity
+- Detect abnormal execution patterns
+- Determine whether escalation is required
+
+Example:
+
+```
+powershell.exe
+ └── external connection initiated
+```
+
+This indicates suspicious activity following execution.
+
+---
+
+## 🧭 Complete Attack Chain Example
+
+```
+User opens phishing email
+ └── winword.exe
+      └── powershell.exe
+           └── cmd.exe
+                └── external connection
+```
+
+This sequence shows the progression from initial access to confirmed suspicious activity.
+
+---
+
+## 🧠 Key Understanding
+
+- ⛓️ Attack chains show how threats progress through stages
+- 🎯 Initial access can occur through phishing, credential compromise, or file execution
+- ⚙️ Process execution reveals attacker activity
+- 🔗 Process relationships help trace attack progression
+- ⬆️ Attack chain analysis supports escalation decisions
