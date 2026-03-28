@@ -32,7 +32,8 @@ Further correlation of events revealed that these failed attempts were followed 
 ## 🔎 Activity Details
 
 ### 🔗 Log Correlation Query
-agent.name:kali AND sshd
+
+   agent.name:kali AND sshd
 
 This query was used to analyze all SSH authentication-related events in a single timeline.
 
@@ -48,7 +49,8 @@ This query was used to analyze all SSH authentication-related events in a single
 
 ## 🧾 Log Evidence
 
-![Authentication Logs](./screenshots/authentication_mixed_logs.png)
+<img width="1907" height="255" alt="Screenshot 2026-03-28 115955" src="https://github.com/user-attachments/assets/3185a155-81ae-45d2-97bc-c735260a4fe3" />
+
 
 ---
 
@@ -58,29 +60,6 @@ The reconstructed activity sequence:
 
 This query was used to analyze all SSH authentication-related events in a single timeline.
 
----
-
-## 📊 Observed Events
-
-- Multiple `authentication failed` events  
-- Detection of repeated password failures (`User missed the password more than one time`)  
-- Successful authentication event (`authentication success`)  
-
----
-
-## 🧾 Log Evidence
-
-![Authentication Logs](./screenshots/authentication_mixed_logs.png)
-
----
-
-## 🧠 Event Sequence
-
-The reconstructed activity sequence:
-authentication failed → authentication failed → authentication failed → authentication success
-
-This reflects a transition from:
-Brute Force Attempts → Successful Authentication
 
 ---
 
